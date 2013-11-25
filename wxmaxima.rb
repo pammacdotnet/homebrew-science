@@ -9,7 +9,8 @@ class Wxmaxima < Formula
 
   def install
     system "./configure", "--disable-dependency-tracking",
-                          "--prefix=#{prefix}"
+                          "--prefix=#{prefix}",
+                          "--with-wx-config=/Users/pammac/bin/wxwidgets/wx-config"
     system 'make'
     cd 'locales' do
       system 'make', 'allmo'
